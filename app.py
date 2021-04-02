@@ -25,7 +25,7 @@ def add_numbers_post():
 	  if request.method == 'GET':
 	  	return render_template('add_numbers.html')
 	  elif request.method == 'POST':
-  	      print(request.form['text'].split())
+  	      print(request.form['text'].split(sep=','))
   	      total = 0
   	      try:
   	      	for str_num in request.form['text'].split():
